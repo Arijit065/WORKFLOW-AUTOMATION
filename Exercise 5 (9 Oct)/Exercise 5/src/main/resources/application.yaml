@@ -1,0 +1,22 @@
+# Camunda 8 SaaS connection.
+# Get the four values from: Console -> your cluster -> API tab -> Create new client -> "Spring Boot" tab.
+# NEVER commit real secrets to GitHub. Either:
+#   (a) set the environment variables below, or
+#   (b) put real values in src/main/resources/application-local.yaml (git-ignored)
+#       and run with:  mvn spring-boot:run -Dspring-boot.run.profiles=local
+spring:
+  application:
+    name: outpass-workflow
+
+server:
+  port: 8080
+
+camunda:
+  client:
+    mode: saas
+    auth:
+      client-id: ${CAMUNDA_CLIENT_ID:YOUR_CLIENT_ID}
+      client-secret: ${CAMUNDA_CLIENT_SECRET:YOUR_CLIENT_SECRET}
+    cloud:
+      cluster-id: ${CAMUNDA_CLUSTER_ID:YOUR_CLUSTER_ID}
+      region: ${CAMUNDA_CLUSTER_REGION:bru-2}

@@ -1,0 +1,10 @@
+# Copy this file to application-local.yaml (it is git-ignored) and fill in real values.
+camunda:
+  client:
+    mode: saas
+    auth:
+      client-id: <your client id>
+      client-secret: <your client secret>
+    cloud:
+      cluster-id: <your cluster id>
+      region: <your region, e.g. bru-2>

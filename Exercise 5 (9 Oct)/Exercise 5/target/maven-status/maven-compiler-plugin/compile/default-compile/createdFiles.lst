@@ -1,0 +1,4 @@
+edu\srmist\outpass\worker\OutpassWorkers.class
+edu\srmist\outpass\api\OutpassRequest.class
+edu\srmist\outpass\OutpassWorkflowApplication.class
+edu\srmist\outpass\api\OutpassController.class
